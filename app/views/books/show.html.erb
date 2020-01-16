@@ -1,6 +1,9 @@
-<h3><%= @book.title %></h3>
-<p><%= @book.created_at %></p>
-<p><%= @book.body %></p>
-<!-- 編集部分 -->
-<%= link_to "編集", edit_book_path(@book) %>
-<%= link_to "削除", book_path(@book), method: :delete %>
+<p id="notice">
+ <%=  notice %>
+</p>
+
+<p>Title: <%= @book.title %></p>
+<p>Body: <%= @book.body %></p>
+
+<%= link_to "Edit", edit_book_path(@book) %>
+<%= link_to "Back", books_path %>
